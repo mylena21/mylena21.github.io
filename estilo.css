@@ -1,0 +1,22 @@
+body {
+    background-color: lightblue;
+  }
+button{
+     background-color: pink;
+     color: brown;
+}
+h1{
+    font-family: "Lucida Handwriting", "Arial", cursive;
+}
+h2{
+    font-family: "Lucida Handwriting", "Arial", cursive;
+    color: rgb(245, 90, 116);
+}
+h3{
+    color: rgb(245, 90, 116);
+    font-family: "Lucida Handwriting", "Arial", cursive;
+}
+li{
+    padding-top: 15spx;
+    list-style: circle;
+}

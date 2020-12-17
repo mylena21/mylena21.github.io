@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>11 de Novembro de 2020, Aula 04 - Atividade 02 </title>
+</head>
+<body>
+	<p>Crie uma função que dado um intervalo (entre x e y) exiba todos número pares:</p>
+	<ul id="lista">
+	</ul>
+	<p id="msg">
+	</p>
+</body>
+
+<script>
+	function pares(x, y){
+		var pares = [];
+		for(i=x; i<=y; i++){
+			if (i % 2 == 0) {
+				pares.push(i);
+			}
+		}
+		return pares.toString();
+	}
+
+	var result = pares(1, 1200);
+	var resultado_array = result.split(",");
+
+	//[4, 6, 8, 10, 12]	
+	resultado_array.forEach(function(numero){
+		var elemento_li = document.createElement("LI"); // <li></li>
+		elemento_li.innerHTML = numero; // <li>4 ou 6 ou 8 ou 10 ...</li>
+		document.getElementById("lista").appendChild(elemento_li); // <ul id="lista"><li> novo</li></ul>
+	});
+
+
+</script>
+<a href="atividades1.html">Voltar</a>
+</html>

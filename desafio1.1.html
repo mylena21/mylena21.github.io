@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>11 de Novembro de 2020, Aula 04 - Atividade 01 </title>
+</head>
+<body>
+	<p>
+	Crie uma função que dado o objeto a seguir:
+	</p>
+	<ul id="lista">
+	</ul>
+	<p id="msg">
+	</p>
+</body>
+
+<script>
+	var endereco = {
+	  rua: "Rua dos pinheiros",
+	  numero: 1293,
+	  bairro: "Centro",
+	  cidade: "São Paulo",
+	  uf: "SP"
+	};
+	
+	var resultado = "O usuário mora em <strong>";
+	resultado += endereco.cidade;
+	resultado += "</strong> / "
+	resultado += endereco.uf;
+	resultado += ", no bairro ";
+	resultado += endereco.bairro;
+	resultado += ", na ";
+	resultado += endereco.rua;
+	resultado += " com no ";
+	resultado += endereco.numero;
+	resultado += ".";
+	
+	console.log(resultado);
+	document.getElementById("msg").innerHTML = resultado;
+</script>
+<a href="atividades1.html">Voltar</a>
+</html>
