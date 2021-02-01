@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="style2.css" media="screen" />
+        <script>
+            $(function () {
+                var glossario = [{
+                    "id": 1, "termo": "W3C"
+                    , "definicao": "World Wide Web Consortium – escritório responsável por desenvolver normas técnicas para a Internet"
+                    , "autor": "José Borges", "dataCriacao": "2015-04-01"
+                }
+                    , {
+                    "id": 2, "termo": "HTML"
+                    , "definicao": "HyperText Markup Language – linguagem de marcação utilizada para estruturar páginas web"
+                    , "autor": "Pedro Silva", "dataCriacao": "2017-05-12"
+                }
+                    , {
+                    "id": 3, "termo": "CSS"
+                    , "definicao": "Cascade Style Sheet – Folhas de estilo utilizadas para configurar a visualização de  páginas web."
+                    , "autor": "Maria Machado", "dataCriacao": "2018-10-11"
+                }
+                ];
+
+                $(glossario).each(function (idx, termos) { 
+                    let title = termos.termo;
+                    $("#termos").append($("<li>").text(title).attr("value", idx))
+
+                    $("#termos").on("click", "li", function () {
+                        let ids = $(this).val(); 
+                        $("#termo").text(glossario[ids].termo);
+                        $("#definicao").text(glossario[ids].definicao);
+                        $("#criador").text(glossario[ids].autor);
+                        $("#createdate").text(glossario[ids].dataCriacao);})
+
+                })
+
+            });
+	</script>
+</head>
+    <body>
+
+    <h1>Dicionário</h1>
+            <p>Clique em um dos elementos da lista para conhecer!</p>
+            <ul id="termos"></ul>
+        <fieldset>
+            <div class="fundo">
+                <p id=termo></p><br>
+                <p id=definicao></p><br>
+                <p id=criador></p>
+               <br><p id=createdate></p>
+            </div>
+        </fieldset>
+        <button id="button"><a href="atividades2.html">Voltar</a></button>
+    </body>
+</html>
