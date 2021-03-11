@@ -1,0 +1,148 @@
+:root {
+	--white: #e6e8e6;
+	--background: #dd0909d3;
+	--orange: #1d1a18;
+}
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	font-family: sans-serif;
+}
+
+body {
+	background: var(--background);
+	color: var(--white);
+	width: 100vw;
+	overflow-x: hidden;
+}
+
+p {
+	font-size: 0.8rem;
+}
+
+.filmes {
+	display:inline-grid;
+	grid-template-columns: 3fr 8fr;
+	padding: 20px;
+	gap: 5rem;
+}
+
+@media screen and (max-width: 1000px) {
+	.filmes {
+		grid-template-columns: 20fr;
+	}
+}
+
+.filmes > div {
+	position: relative;
+	width: 80rem;
+	height: 13rem;
+	background: rgba(81, 94, 82, 0.883);
+	padding: 10px;
+	border-radius: 10px;
+	border:solid 2px #0a0a09;
+}
+
+.rating {
+	position: absolute;
+	top: 80px;
+	right: 0px;
+}
+
+.rating img {
+	width: 0.8rem;
+}
+
+.idadediv {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	width: 35px;
+	height: 35px;
+	display: flex;
+	justify-content: center;
+	align-items: left;
+
+	border-radius: 5px;
+}
+
+.idade {
+	font-size: 1.5rem;
+
+	font-weight: 600;
+	padding: 5px;
+	color: rgb(8, 8, 8);
+
+	text-align: justify;
+	text-justify: inter-word;
+}
+
+.info {
+	padding: 0 15px;
+	max-width: 10rem;
+	overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+	width: 12px;
+}
+
+::-webkit-scrollbar-track {
+	background:#fff;
+}
+
+::-webkit-scrollbar-thumb {
+	background: rgb(221, 28, 28);
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: var(--orange);
+}
+
+.semelhantes {
+	position: absolute;
+	bottom: 0;
+	display: flex;
+	flex-direction: column;
+	padding: 5px;
+}
+
+.semelhantes > div {
+	display: flex;
+	flex-direction: row;
+	gap: 0.8rem;
+}
+
+.semelhantes img {
+	width: 4rem;
+}
+
+.descricao {
+	padding: 10px 0;
+}
+
+.horizontal {
+	display: flex;
+	flex-direction: row;
+	max-height: 5rem;
+}
+.thumbnail {
+	width: 150px;
+	border-radius: 10px;
+
+}
+.content {
+	margin: 0 auto;
+	padding: 20px 0;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: left;
+}
+
+.fullstar {
+	width: 2rem;
+	filter: sepia(100) saturate(4) brightness(1.5);
+}
